@@ -1,3 +1,13 @@
 h1 {
     color: blue;
 }
+
+.first-paragraph {
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cha-ching {
+    color: greenyellow;
+    font-size: larger;
+}
