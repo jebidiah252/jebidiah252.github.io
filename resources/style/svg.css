@@ -1,0 +1,44 @@
+line {
+    stroke: black;
+    stroke-width: 5;
+}
+
+rect {
+    stroke: black;
+    fill: black;
+}
+
+.subtitle {
+    font-size: medium;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.head {
+    stroke: black;
+    stroke-width: 5;
+    fill: yellow;
+}
+
+.eye {
+    stroke: black;
+    fill: white;
+    stroke-width: 5;
+}
+
+.pupil {
+    fill: black;
+    stroke: black;
+}
+
+.tongue {
+    fill: red;
+    stroke: black;
+    stroke-width: 2;
+}
+
+.teeth {
+    fill: white;
+    stroke: black;
+    stroke-width: 2;
+}
