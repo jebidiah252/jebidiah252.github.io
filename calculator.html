@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="resources/scripts/calculation.js"></script>
+    <script>
+        const calculations = [];
+        do {
+            let x = prompt("What is the value of 'x'?");
+            let op = prompt("What operator will you be using?");
+            let y = prompt("What is the value of 'y'?");
+
+            calculations.push(new Calculation(x, y, op));
+        } while (confirm("Would you like to continue?"));
+
+        calculations.forEach(printCalculations);
+    </script>
+</head>
+<body>
+    <div id="results-calculator"></div>
+    <p>Finished with the calculator? Click <a href="index.html">here</a> to return to the home page!</p>
+</body>
+</html>
