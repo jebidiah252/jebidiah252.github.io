@@ -77,7 +77,7 @@ function getCalculationResult(x, y, op) {
 function printCalculations(calculation) {
     let errors = validateCalculation(calculation);
 
-    let output = "<tr><td>" + calculation.getX() + "</td><td>" + calculation.getOp() + "</td><td>" + calculation.getY()+ "</td><td>";
+    let output = "<tr><td>" + calculation.getX() + "</td><td class=\"op\">" + calculation.getOp() + "</td><td>" + calculation.getY()+ "</td><td>";
     
     if (errors.length !== 0) {
         output += printErrors(errors);

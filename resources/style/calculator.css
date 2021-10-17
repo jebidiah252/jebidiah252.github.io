@@ -1,5 +1,11 @@
 table, th, td {
     border: 1px solid black;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.op {
+    background-color: lightcoral;
 }
 
 th {
