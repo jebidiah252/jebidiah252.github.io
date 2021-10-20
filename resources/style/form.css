@@ -10,3 +10,11 @@ label {
 input[type=submit] {
     margin-left: 150px;
 }
+
+.error {
+    color: red;
+}
+
+.warning {
+    color: orange;
+}

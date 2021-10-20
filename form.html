@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Form Practice</title>
-    <script src="resources/scripts/form.js"></script>
     <link rel="stylesheet" href="resources/style/form.css">
 </head>
 <body>
@@ -18,7 +17,7 @@
         <label class="text-input" for="confirm">Confirm Password:</label>
         <input type="password" id="confirm" name="confirm"><br>
         <label class="text-input" for="gender">Gender:</label>
-        <input type="radio" id="female" name="gender" value="Female" checked>
+        <input type="radio" id="female" name="gender" value="Female">
         <label for="female">Female</label>
         <input type="radio" id="male" name="gender" value="Male">
         <label for="male">Male</label>
@@ -119,22 +118,24 @@
             <option value="2010">2010</option>
         </select><br>
         <label class="text-input" for="genre-checkbox">Favorite Music Genre:</label>
-        <input type="checkbox" name="genre-pop" value="pop">
+        <input type="checkbox" id="pop-checkbox" name="genre-pop" value="pop">
         <label for="genre-pop">Pop</label>
-        <input type="checkbox" name="genres-hiphop" value="hiphop">
+        <input type="checkbox" id="hiphop-checkbox" name="genres-hiphop" value="hiphop">
         <label for="genre-hiphop">Hiphop</label>
-        <input type="checkbox" name="genres-jazz" value="jazz">
+        <input type="checkbox" id="jazz-checkbox" name="genres-jazz" value="jazz">
         <label for="genre-jazz">Jazz</label>
-        <input type="checkbox" name="genres-rock" value="rock">
+        <input type="checkbox" id="rock-checkbox" name="genres-rock" value="rock">
         <label for="genre-rock">Rock</label>
-        <input type="checkbox" name="genres-classical" value="classical">
+        <input type="checkbox" id="classical-checkbox" name="genres-classical" value="classical">
         <label for="genre-classical">Classical Music</label>
-        <input type="checkbox" name="genres-country" value="country">
+        <input type="checkbox" id="country-checkbox" name="genres-country" value="country">
         <label for="genre-country">Country</label><br>
         <input type="submit">
         <input type="reset">
-    </form><br>
+    </form>
     <br>
-    <p class="text-input">Tired of practicing filling out forms? Click <a href="index.html">here</a> to return back to the main page.</p>
+    <div id="output"></div>
+    <p>Tired of practicing filling out forms? Click <a href="index.html">here</a> to return back to the main page.</p>
 </body>
+<script src="resources/scripts/form.js"></script>
 </html>
