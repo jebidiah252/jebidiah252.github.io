@@ -26,7 +26,7 @@ function textValidator(valueFromForm, fieldName, regex) {
 function radioValidator(radioButtons) {
     let isOneUnchecked = [];
 
-    for (let radio in radioButtons) {
+    for (let radio of radioButtons) {
         isOneUnchecked.push(radio.checked);
     }
 
@@ -42,11 +42,11 @@ function birthdayValidator(selectArray) {
     let birthdayErrors = [];
 
     for (let i = 0; i < selectArray.length; i++) {
-        birthdayErrors.push(selectArray[i].value !== "0");
+        birthdayErrors.push(selectArray[i].value !== "");
     }
 
     if (birthdayErrors.includes(false)) {
-        errors.push(createErrorMessage('error', 'Birthday'));
+        errors.push(createErrorMessage('error', 'Birthday', true));
         return false;
     }
 
@@ -85,14 +85,15 @@ function eventHandler(event) {
     allFieldsValid.push(birthdayValidator(select));
 
     if (!allFieldsValid.includes(false)) {
-        if (!firstPasswd === secondPasswd) {
+        if (firstPasswd !== secondPasswd) {
             confirm('Passwords to not match');
+            event.preventDefault();
         } else {
             location.href = 'index.html'
         }
     } else {
         errors.forEach(string => {
-            document.getElementById('output').innerHTML += string + '<br>';
+            document.getElementById('output').innerHTML += string;
         });
         event.preventDefault();
     }
