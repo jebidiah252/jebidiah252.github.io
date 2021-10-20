@@ -1,13 +1,15 @@
-table, th, td {
+table, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
     border: 1px solid black;
     padding: 10px;
     font-weight: bolder;
+    background-color: orange;
 }
 
 .op {
     background-color: lightcoral;
-}
-
-th {
-    background-color: orange;
 }
