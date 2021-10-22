@@ -54,8 +54,6 @@ for (let i = 1; i < 4; i++) {
         .attr("id", "div-" + i);
 }
 
-
-
 d3.selectAll("img")
     .on("mouseenter", function() {
         d3.select("#div-1")
@@ -78,3 +76,10 @@ d3.selectAll("img")
             .attr("height", 100)
             .attr("width", 100);
     });
+
+d3.selectAll("body")
+    .append("P")
+    .text("Tired of seeing how events work? To go back to the home page, click ")
+    .append("a")
+    .attr("href", "index.html")
+    .text("here!")

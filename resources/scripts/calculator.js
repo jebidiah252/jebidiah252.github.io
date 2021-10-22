@@ -91,7 +91,7 @@ function printCalculations(calculation) {
 }
 
 function printResults() {
-    document.write(`<tr><td>${Math.min(results).toString()}</td><td>${Math.max(results).toString()}</td><td>${((results.reduce((a, b) => a + b, 0)) / results.length).toString()}</td><td>${(results.reduce((a, b) => a + b, 0)).toString()}</td></tr>`);
+    document.write(`<tr><td>${Math.min.apply(Math, results).toString()}</td><td>${Math.max.apply(Math, results).toString()}</td><td>${((results.reduce((a, b) => a + b, 0)) / results.length).toString()}</td><td>${(results.reduce((a, b) => a + b, 0)).toString()}</td></tr>`);
 }
 
 const calculations = [];

@@ -30,12 +30,12 @@ function radioValidator(radioButtons) {
         isOneUnchecked.push(radio.checked);
     }
 
-    if (isOneUnchecked.includes(false)) {
-        errors.push(createErrorMessage('error', 'Gender', true));
-        return false;
+    if (isOneUnchecked.includes(true)) {
+        return true;
     }
 
-    return true;
+    errors.push(createErrorMessage('error', 'Gender', true));
+    return false;
 }
 
 function birthdayValidator(selectArray) {
@@ -54,6 +54,7 @@ function birthdayValidator(selectArray) {
 }
 
 function eventHandler(event) {
+    event.preventDefault();
     errors = [];
     document.getElementById('output').innerHTML = '';
     let allFieldsValid = [];
@@ -87,15 +88,13 @@ function eventHandler(event) {
     if (!allFieldsValid.includes(false)) {
         if (firstPasswd !== secondPasswd) {
             confirm('Passwords to not match');
-            event.preventDefault();
         } else {
-            location.href = 'index.html'
+            window.location.href = 'index.html'
         }
     } else {
         errors.forEach(string => {
             document.getElementById('output').innerHTML += string;
         });
-        event.preventDefault();
     }
 }
 
